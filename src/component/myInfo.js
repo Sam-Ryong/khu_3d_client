@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux"; // useSelector import
-import "./homepage.css";
+import { useSelector } from "react-redux";
+import "./myinfo.css"; // 스타일을 외부 CSS 파일로 관리
 
 const MyInfo = () => {
   const { email } = useSelector((state) => state.user); // Redux 상태에서 email 가져오기
@@ -24,32 +24,35 @@ const MyInfo = () => {
   }, []);
 
   return (
-    <div className="hero">
+    <div className="my-info-container">
+      <h1 className="title">내 정보</h1>
       {/* 리스트 데이터 렌더링 */}
       <div className="data-list">
         {dataList.length > 0 ? (
           <ul>
             {dataList.map((item) => (
-              <li key={item.id}>
-                {/* 항목 데이터를 렌더링 */}
-                <p>
-                  <strong>Name:</strong> {item.name}
-                </p>
-                <p>
-                  <strong>Email:</strong> {item.email}
-                </p>
-                <p>
-                  <strong>Created At:</strong>{" "}
-                  {new Date(item.createdAt).toLocaleString()}
-                </p>
-                <p>
-                  <strong>Eval:</strong> {item.eval}
-                </p>
+              <li key={item.id} className="data-item">
+                {/* 카드 스타일로 항목 데이터를 렌더링 */}
+                <div className="card">
+                  <p>
+                    <strong>Name:</strong> {item.name}
+                  </p>
+                  <p>
+                    <strong>Email:</strong> {item.email}
+                  </p>
+                  <p>
+                    <strong>Created At:</strong>{" "}
+                    {new Date(item.createdAt).toLocaleString()}
+                  </p>
+                  <p>
+                    <strong>Eval:</strong> {item.eval}
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
         ) : (
-          <p>데이터가 없거나, 로그인을 해야합니다.</p>
+          <p>데이터가 없거나, 로그인을 해야 합니다.</p>
         )}
       </div>
     </div>
