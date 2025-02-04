@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4f9ec2e5.css",
+    "main.js": "/static/js/main.51441fcd.js",
+    "static/js/488.015e7343.chunk.js": "/static/js/488.015e7343.chunk.js",
+    "static/media/khu_logo.png": "/static/media/khu_logo.72483447ef92bb0af83e.png",
+    "index.html": "/index.html",
+    "main.4f9ec2e5.css.map": "/static/css/main.4f9ec2e5.css.map",
+    "main.51441fcd.js.map": "/static/js/main.51441fcd.js.map",
+    "488.015e7343.chunk.js.map": "/static/js/488.015e7343.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f9ec2e5.css",
+    "static/js/main.51441fcd.js"
+  ]
+}
