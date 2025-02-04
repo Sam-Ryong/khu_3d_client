@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://ec2-13-124-15-96.ap-northeast-2.compute.amazonaws.com:8080"
+  "proxy": "http://ec2-13-124-15-96.ap-northeast-2.compute.amazonaws.com:8080",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
